@@ -1,0 +1,650 @@
+
+/* TEAM MEMBERS
+Nandhimandalam, Lakshmi - 1001719397
+Garikipati, Kavya Sri - 1001953373
+Allakonda, Saiteja - 1001991721
+
+References
+https://www.w3schools.com/howto/howto_js_topnav.asp
+WDM Course Material
+Images were designed in https://www.canva.com/
+https://stackoverflow.com/questions/9618504/how-to-get-the-selected-radio-button-s-value */
+
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+/* Home Page Styles */
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: lavender;
+  margin-top: 0px;
+}
+
+nav{
+  background: #33302d;
+  height: 80px;
+  width: 100%;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+label.header{
+ float: left;
+ margin-left: 15px;
+ width: 35%;
+ height: 70px;
+ font-size: 30px;
+ color: white;
+ padding-bottom: 0;
+ margin-bottom: 0;
+ display: flex;
+ align-items: center;
+}
+
+nav ul{
+ float: right;
+ margin-right: 15px;
+ margin-top: 30px;
+}
+
+nav ul li{
+ display: inline-block;
+}
+
+nav ul li a{
+ color: white;
+ font-size: 18px;
+ padding: 5px 10px;
+ text-decoration: none;
+}
+
+a:hover{
+ background-color: #c7c1c1;
+}
+
+h1.admin{
+ margin-top: 20px;
+ color: teal;
+}
+
+.homebanner{
+ margin-bottom: 0px;
+}
+
+.body-container{
+ background-color: lavender;
+ margin-top: 0px;
+ width: 100%;
+ height: 500px;
+ 
+}
+
+.img-container{
+ float: left;
+ width: 65%;
+ height: 500px;
+}
+
+.img-container img{
+ width: 100%;
+ height: 500px;
+}
+
+.text-container{
+ margin-left: 65%;
+ height: 500px;
+}
+
+.text-container p{
+ font-size: 26px;
+ font-family: 'Times New Roman', Times, serif;
+ line-height: 40px;
+ padding: 20px;
+ color: #8e3525;
+}
+
+footer{
+ background: #33302d;
+ text-align: center;
+ padding-top: 20px;
+ position: fixed;
+ bottom: 0;
+ left: 0;
+ width: 100%;
+ display: block;
+}
+
+
+footer a{
+ color: wheat;
+ text-align: center;
+ padding-top: 20px;
+ padding-bottom: 10px;
+ text-decoration: none;
+
+}
+
+footer p{
+ color: wheat;
+ text-align: center;
+ padding-top: 10px;
+
+ 
+}
+
+/* SignUp Page styles */
+
+.reg-page{
+ background:#87d8ed;
+ padding: 15px;
+ display: flex;
+ justify-content: center;
+ align-items: center; 
+ font-family: Arial, Helvetica, sans-serif;
+  
+  margin-top: 0px; 
+}
+
+.reg-container{
+ background:#0d4554;
+ padding: 25px;
+ max-width: 700px;
+ width: 100%;
+ height: 400px;
+}
+
+.form-heading{
+ font-size: 30px;
+}
+
+.inputdetails{
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: space-between;
+}
+
+
+/* Admin page styles */
+
+.row-admin {
+ display: flex;
+ flex-wrap: wrap;
+ padding: 0 4px;
+ margin-left: 50px;
+}
+
+.column-admin {
+ flex: 30%;
+ max-width: 30%;
+ padding: 5px 5px;
+ margin: 5px 5px;
+}
+
+.column-admin img {
+ margin-top: 8px;
+ opacity: 1;
+ vertical-align: middle;
+ width: 100%;
+ height:200px;
+ border: 5px solid #0d4554;
+ border-radius: 20px;
+}
+
+.column-admin img:hover {
+ opacity: 0.6;
+}
+
+/* CRUD Operation Pages Styles */
+
+.manage-mgr{
+ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+ color:teal;
+ margin-top: 20px;
+}
+
+.crud-heading{
+ margin-top: 0px;
+ width: 100%;
+ height: 50px;
+ 
+}
+
+.crud-heading .crud-h1{
+ float: left;
+ width: 30%;
+ height: 50px;
+}
+
+.crud-heading .crud-h1 a{
+
+ margin-left: 20px;
+ width: 80px;
+ height: 40px;
+}
+
+.crud-heading .crud-h1 a input{
+ background-color: darkslategray;
+ color: white;
+ width: 80px;
+ height: 40px;
+ font-size: 20px;
+ opacity: 1;
+}
+.crud-h2{
+ margin-left: 30%;
+ height: 50px;
+}
+
+.crud-operation{
+ text-align: center;
+ margin: 20px 40px;
+ margin-top:40px;
+}
+
+.crud-operation ul li{
+ padding: 30px 10px;
+ text-decoration: none;
+ list-style: none;
+ font-size: 26px;
+}
+
+.crud-operation ul li a{
+ text-decoration: none;
+ color:teal ;
+}
+
+.crud-table{
+ align-items: center;
+ margin:50px 150px;
+ width:800px;
+}
+.card {
+  position: relative;
+}
+.count{
+  position: absolute;
+  left:50%;
+  top:120px;
+  font-size: 50px;
+  z-index: 100;
+  transform: translate(-50%,-50%);
+  width:50px;height:50px;
+}
+
+table{
+align-items: center;
+width:100%;
+border-collapse: collapse;
+}
+th, td {
+ padding: 8px;
+ border:1px solid black;
+}
+th{
+  background-color: #0d4554;
+  color:white;
+}
+
+.crud-add-details{
+ margin: 50px 20px;
+}
+
+.crud-modify-details{
+ margin: 50px 20px;
+}
+
+.crud-delete-details{
+ margin: 50px 20px;
+}
+
+.crud-fielset legend{
+ font-size: 20Px;
+ color:teal ;
+}
+
+
+.crud-fielset{
+ font-size:14px;    
+ padding:20px;    
+ width:500px;    
+ line-height:1.6;    
+ margin: 0 auto; 
+}
+
+.crud-fielset label{
+ width: 100px;
+ display: inline-block;
+}
+
+.crud-fielset input{
+ width: 270px;
+ padding: 10px;
+ /* margin-left: 50px; */
+}
+
+/* Success Page Styles */
+
+.success-height center h1{
+  padding-top: 400px;
+  padding-bottom: 400px;
+  margin-top:200px ;
+  color: teal;
+
+}
+
+.btn-height{
+  height: 20px;
+  margin-bottom: 200px;
+  margin-top: 200px;
+  font-size: 20px;
+}
+
+.successpg{
+ margin: 50px 100px;
+}
+
+.successpg h1{
+ color: teal;
+ margin-bottom: 20px;
+}
+
+.successpg li{
+ margin-top: 30px;
+ font-size: 20px;
+ text-decoration: none;
+ 
+}
+.successpg a{
+ color: teal;
+}
+
+/* About Page Styles */
+
+.about-page {
+ color: teal;
+ text-align: center;
+ width: 80%;
+}
+
+.about-page h1{
+ margin: 30px 300px;
+ width:50%;
+}
+
+.about-page p{
+ font-size: 20px;
+ line-height: 40px;
+ margin: 40px 300px;
+ width: 50%;
+}
+
+/* Services page styles */
+
+
+.services-page {
+ color: teal;
+ width: 80%;
+ margin-top: 50px;
+}
+
+.services-page h1{
+ margin-left: 30px; 
+}
+
+.services-page .services-row{
+ margin: 20px 200px ;
+}
+
+.services-page .services-row h2{
+ margin-bottom: 20px;
+ margin-left: 40px;
+}
+
+.services-page .services-row img{
+ width: 400px;
+}
+
+.services-page .services-row p{
+ padding-top: 10px;
+ line-height: 25px;
+}
+
+/* Login page styles */
+
+.login-container{
+ margin: 60px 300px;
+   background:#0d4554;
+   padding: 25px;
+   max-width: 700px;
+   width: 100%;
+   min-height: 310px;
+}
+
+.login-container h1{
+ color: white;
+ text-align: center;
+ font-size: 50px;
+ margin-bottom: 40px;
+}
+
+.login-container .login-page{
+ text-align: center;
+}
+
+.login-container .login-page label{
+ color: white;
+ font-size: 26px;
+ margin-bottom: 20px;
+ width: 120px;
+}
+
+.login-container .login-page input{
+ 
+ font-size: 20px;
+ margin-bottom: 20px;
+ margin-left: 10px;
+ padding:6px;
+}
+
+.login-container .login-page textarea{
+ 
+  font-size: 20px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+ }
+
+.login-container .login-page button{
+ background-color:teal ;
+ color: white;
+ width: 120px;
+ height:50px;
+ font-size: 20px;
+
+}
+
+.login-container .login-page h5{
+ font-size: 20px;
+ color: white;
+ margin-bottom: 10px;
+}
+
+.login-container .login-page input[type=submit]{
+ background-color:teal ;
+ color: white;
+ width: 120px;
+ height:50px;
+ font-size: 20px;
+
+}
+
+.Btn{
+  padding:6px 20px;
+  margin-left: 10px;
+}
+.Btn a{
+  text-decoration: none;
+  color:#0d4554;
+}
+
+
+@media screen and (max-width: 800px) {
+ /* page responsiveness for Admin page */
+ .column-admin {
+   flex: 70%;
+   max-width: 70%;
+   position:relative;
+ }
+
+ /* page responsiveness for About page */
+ .about-page{
+   max-width: 90%;
+ }
+ .about-page h1{
+   max-width: 90%;
+   margin-left:200px;
+ }
+ .about-page p{
+   max-width:90% ;
+   margin-left:200px;
+ }
+
+/* page responsiveness for Home Page */
+nav{
+ height:160px;
+}
+
+.img-container{
+ width: 100%;
+}
+
+.text-container{
+ margin:0;
+ width: 100%;
+ position: relative;
+ height:800px;
+}
+.body-container{
+ height: 800px;
+}
+
+/* Page responsiveness for Services Page */
+.services-page .services-row{
+ margin: 20px 20px ;
+}
+
+.services-page .services-row p{
+ width:100%;
+ margin:0;
+}
+
+ /* Page responsiveness for SignUp Page */
+ .login-container{
+   margin-left: 15px;
+     padding: 15px;
+     max-width: 700px;
+     width: 80%;
+     height: 500px;
+ }
+ .login-container .login-page{
+   text-align: center;
+   width: 100%;
+ }
+  /* Page responsiveness for view pages */
+ .crud-table{
+   margin:0;
+ }
+ th, td {
+   padding: 5px;
+ }
+ .crud-h2{
+   margin-left: 0;
+ }
+ /* Page responsiveness for modify and delete pages */
+ .crud-fielset{   
+   width:400px;    
+ }
+
+}
+
+@media screen and (max-width: 500px) {
+ /* page responsiveness for Admin Page*/
+ .column-admin {
+   flex: 100%;
+   max-width: 100%;
+ }
+ /* page responsiveness for About page */
+
+ .about-page{
+   max-width: 100%;
+ }
+ .about-page h1{
+   max-width: 100%;
+   margin-left:100px;
+ }
+ .about-page p{
+   max-width:100% ;
+   margin-left:100px;
+ }
+ /* page responsiveness for Home Page */
+ nav{
+   height:160px;
+ }
+
+ .img-container{
+   width: 100%;
+ }
+
+ .text-container{
+   margin:0;
+   width: 100%;
+   position: relative;
+   height:1000px;
+ }
+ .body-container{
+   
+   height: 1000px;
+ }
+
+ /* Page responsiveness for Services Page */
+
+ .services-page .services-row{
+   margin: 10px 10px ;
+ }
+
+ .services-page .services-row p{
+   width:100%;
+   margin:0;
+ }
+
+ /* Page responsiveness for SignUp and login Page */
+ .login-container{
+   margin-left: 5px;
+     padding: 5px;
+     max-width: 700px;
+     width: 90%;
+     height: 510px;
+ }
+ .login-container .login-page{
+   text-align: center;
+   width: 100%;
+ }
+
+ /* Page responsiveness for view pages */
+ .crud-table{
+   margin:0;
+   width: 100%;
+ }
+ th, td {
+   padding: 5px;
+ }
+ .crud-h2{
+   margin-left: 0;
+ }
+ /* Page responsiveness for modify and delete pages */
+ .crud-fielset{   
+   width:400px;    
+ }
+}
